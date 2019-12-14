@@ -22,7 +22,7 @@
             Setting
         </TextBlock>
         
-        <Image x:Name="Close" Source="/Images\MenuButton.png"  Margin="413,610,367,10" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
+        <Image Name="CloseBut" Source="/Images\MenuButton.png"  Margin="413,610,367,10" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
         <Image Name="CloseHighlight" Source="/Images\MenuButtonHighlight.png"  Margin="413,610,367,10" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Hidden" Focusable="False"/>
         <TextBlock Name="CloseText"  Margin="413,610,367,10" Height="100" Width="500" TextAlignment="Center" FontSize="72" Focusable="False" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave" MouseUp="Window_MouseUp">
             Close

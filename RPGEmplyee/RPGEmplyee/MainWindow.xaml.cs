@@ -47,15 +47,15 @@ namespace RPGEmployee
 
         private void Window_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (e.Source.Equals(StartGameText))
+            if (e.Source.Equals(CloseText))
             {
-
+                Close();
             }
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.Key.Equals(Key.Escape)) Close();
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
