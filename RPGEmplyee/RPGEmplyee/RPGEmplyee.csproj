@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Launcher.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MenuButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuButtonHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuButtonGray.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

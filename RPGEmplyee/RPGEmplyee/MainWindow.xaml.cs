@@ -20,22 +20,45 @@ namespace RPGEmployee
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void StartGame_MouseEnter(object sender, MouseEventArgs e)
+
+
+        private void Window_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Visible;
+           // if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Visible;
+            if (e.Source.Equals(CloseText))
+            {
+                CloseHighlight.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
+        private void Window_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Hidden;
+         //   if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Hidden;
+            if (e.Source.Equals(CloseText)) CloseHighlight.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void Window_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (e.Source.Equals(StartGameText))
+            {
+
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
 
-        private void Setting_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Close_MouseEnter(object sender, MouseEventArgs e)
+        private void Window_KeyUp(object sender, KeyEventArgs e)
         {
 
         }

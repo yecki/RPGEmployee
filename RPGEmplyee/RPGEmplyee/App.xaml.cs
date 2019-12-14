@@ -13,5 +13,18 @@ namespace RPGEmployee
     /// </summary>
     public partial class App : Application
     {
+        MainWindow mwd;
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            mwd = new MainWindow
+            {
+                Visibility = System.Windows.Visibility.Visible
+            };
+            
+
+        }
+      
+
     }
 }
