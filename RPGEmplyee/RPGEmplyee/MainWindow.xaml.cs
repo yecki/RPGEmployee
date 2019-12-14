@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace RPGEmployee
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        SoundPlayer step = new SoundPlayer("../../Sounds\\MenuBlip.wav");
         public MainWindow()
         {
             InitializeComponent();
@@ -30,12 +31,17 @@ namespace RPGEmployee
 
         private void Window_MouseEnter(object sender, MouseEventArgs e)
         {
-            if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Visible;
+            if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Visible; 
            // if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Visible;
             if (e.Source.Equals(CloseText))
             {
                 CloseHighlight.Visibility = System.Windows.Visibility.Visible;
             }
+             
+            System.Console.WriteLine(System.IO.Path.GetFullPath("../../Sounds\\step.wav"));
+            
+            step.Play();
+
         }
 
         private void Window_MouseLeave(object sender, MouseEventArgs e)

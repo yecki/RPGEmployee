@@ -102,13 +102,27 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuButton.png" />
+    <Resource Include="Images\MenuButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuButtonHighlight.png" />
+    <Resource Include="Images\MenuButtonHighlight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuButtonGray.png" />
+    <Resource Include="Images\MenuButtonGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\MenuBlip.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sounds\step.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
