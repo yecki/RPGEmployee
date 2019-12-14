@@ -18,10 +18,11 @@ namespace RPGEmployee
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             mwd = new MainWindow
-            {
-                Visibility = System.Windows.Visibility.Visible
+            {        
+            Visibility = System.Windows.Visibility.Visible
             };
             
+                ;
 
         }
       

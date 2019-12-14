@@ -6,14 +6,29 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E2FB5D2A-5C9A-4D45-9692-91E40802EAB6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>RPGEmplyee</RootNamespace>
-    <AssemblyName>RPGEmplyee</AssemblyName>
+    <RootNamespace>RPGEmployee</RootNamespace>
+    <AssemblyName>RPGEmployee</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -97,35 +112,47 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\MenuBackground.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Images\MenuBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\MenuButton.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Images\MenuButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\MenuButtonHighlight.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Images\MenuButtonHighlight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\MenuButtonGray.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Images\MenuButtonGray.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sounds\MenuBlip.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sounds\step.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Sounds\MenuBlip.wav" />
+    <None Include="Sounds\step.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\PlaceholderBackground.png" />
+    <Resource Include="Images\GameBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sounds\bgmfailPlaceHolder.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Crate.png" />
+    <Resource Include="Images\Placeholder character 1.png" />
+    <Resource Include="Images\Placeholder character 2.png" />
+    <Resource Include="Images\PlaceholderDude.png" />
+    <Resource Include="Images\Pouch.png" />
+    <Resource Include="Images\Robe.png" />
+    <Resource Include="Images\Sword.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

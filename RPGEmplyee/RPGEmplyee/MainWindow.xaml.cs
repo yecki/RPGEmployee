@@ -26,10 +26,12 @@ namespace RPGEmployee
 
         public String gameState = "Menu";
 
-        SoundPlayer step = new SoundPlayer("Sounds/MenuBlip.wav");
+        SoundPlayer menuBlip = new SoundPlayer(RPGEmployee.Properties.Resources.MenuBlip);
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         public void SwitchGameState(String newGamestate)
@@ -44,16 +46,19 @@ namespace RPGEmployee
                 SettingText.Visibility = SetVisibility(true);
                 CloseBut.Visibility = SetVisibility(true);
                 CloseText.Visibility = SetVisibility(true);
+                gameState = "Menu";
             }else if (newGamestate.Equals("Game"))
             {
                 GameBackground.Visibility = SetVisibility(true);
                 MenuBackground.Visibility = SetVisibility(false);
                 StartGame.Visibility = SetVisibility(false);
+                StartGameHighlight.Visibility = SetVisibility(false);
                 StartGameText.Visibility = SetVisibility(false);
                 SettingBut.Visibility = SetVisibility(false);
                 SettingText.Visibility = SetVisibility(false);
                 CloseBut.Visibility = SetVisibility(false);
                 CloseText.Visibility = SetVisibility(false);
+                gameState = "Game";
             }
         }
 
@@ -67,11 +72,21 @@ namespace RPGEmployee
         {
             switch (gameState)
             {
-                case "Menu": {
-                        if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Visible;
+                case "Menu":
+                    {
+                        if (e.Source.Equals(StartGameText))
+                        {
+                            StartGameHighlight.Visibility = System.Windows.Visibility.Visible;
+                            menuBlip.Play();
+                        }
+                        
                         // if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Visible;
-                        if (e.Source.Equals(CloseText)) CloseHighlight.Visibility = System.Windows.Visibility.Visible;
-
+                        if (e.Source.Equals(CloseText))
+                        {
+                            CloseHighlight.Visibility = System.Windows.Visibility.Visible;
+                            menuBlip.Play();
+                        }
+                        
                     }break;
 
                 case "Game": { }break; 
@@ -81,7 +96,7 @@ namespace RPGEmployee
              
            
             
-            step.Play();
+           
 
         }
 
@@ -141,7 +156,7 @@ namespace RPGEmployee
 
                     case "Game":
                         {
-                            gameState = "Menu";
+                            if(e.Key.Equals(Key.Escape)) SwitchGameState("Menu");
                         }
                         break;
 
