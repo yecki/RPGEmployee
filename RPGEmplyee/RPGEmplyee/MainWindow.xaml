@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPGEmplyee"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" AllowsTransparency="True" WindowStyle="none" WindowStartupLocation="CenterScreen" Width="1280" Height="720">
     <Grid>
-        
+        <Image Name="MenuBackground" Source="E:\GameJam\RPGEmployee\Images\MenuBackground.png" HorizontalAlignment="Left"   VerticalAlignment="Top">
+            
+        </Image>
     </Grid>
 </Window>
