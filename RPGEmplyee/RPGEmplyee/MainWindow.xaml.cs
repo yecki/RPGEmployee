@@ -21,24 +21,65 @@ namespace RPGEmployee
     /// </summary>
     public partial class MainWindow : Window
     {
-        SoundPlayer step = new SoundPlayer("../../Sounds\\MenuBlip.wav");
+
+
+
+        public String gameState = "Menu";
+
+        SoundPlayer step = new SoundPlayer("Sounds/MenuBlip.wav");
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        public void SwitchGameState(String newGamestate)
+        {
+            if (newGamestate.Equals("Menu"))
+            {
+                GameBackground.Visibility = SetVisibility(false);
+                MenuBackground.Visibility = SetVisibility(true);
+                StartGame.Visibility = SetVisibility(true);
+                StartGameText.Visibility = SetVisibility(true);
+                SettingBut.Visibility = SetVisibility(true);
+                SettingText.Visibility = SetVisibility(true);
+                CloseBut.Visibility = SetVisibility(true);
+                CloseText.Visibility = SetVisibility(true);
+            }else if (newGamestate.Equals("Game"))
+            {
+                GameBackground.Visibility = SetVisibility(true);
+                MenuBackground.Visibility = SetVisibility(false);
+                StartGame.Visibility = SetVisibility(false);
+                StartGameText.Visibility = SetVisibility(false);
+                SettingBut.Visibility = SetVisibility(false);
+                SettingText.Visibility = SetVisibility(false);
+                CloseBut.Visibility = SetVisibility(false);
+                CloseText.Visibility = SetVisibility(false);
+            }
+        }
 
+        public System.Windows.Visibility SetVisibility(Boolean isNowVisible)
+        {
+            if (isNowVisible) return System.Windows.Visibility.Visible;
+            else return System.Windows.Visibility.Hidden;
+        }
 
         private void Window_MouseEnter(object sender, MouseEventArgs e)
         {
-            if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Visible; 
-           // if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Visible;
-            if (e.Source.Equals(CloseText))
+            switch (gameState)
             {
-                CloseHighlight.Visibility = System.Windows.Visibility.Visible;
+                case "Menu": {
+                        if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Visible;
+                        // if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Visible;
+                        if (e.Source.Equals(CloseText)) CloseHighlight.Visibility = System.Windows.Visibility.Visible;
+
+                    }break;
+
+                case "Game": { }break; 
+
             }
+            
              
-            System.Console.WriteLine(System.IO.Path.GetFullPath("../../Sounds\\step.wav"));
+           
             
             step.Play();
 
@@ -46,27 +87,66 @@ namespace RPGEmployee
 
         private void Window_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Hidden;
-         //   if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Hidden;
-            if (e.Source.Equals(CloseText)) CloseHighlight.Visibility = System.Windows.Visibility.Hidden;
+            switch (gameState)
+            {
+                case "Menu":
+                    {
+                        if (e.Source.Equals(StartGameText)) StartGameHighlight.Visibility = System.Windows.Visibility.Hidden;
+                        //   if (e.Source.Equals(SettingText)) SettingHighlight.Visibility = System.Windows.Visibility.Hidden;
+                        if (e.Source.Equals(CloseText)) CloseHighlight.Visibility = System.Windows.Visibility.Hidden;
+                    }
+                    break;
+
+                case "Game": { } break;
+
+            }
+
+            
         }
 
         private void Window_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (e.Source.Equals(CloseText))
+            switch (gameState)
             {
-                Close();
+                case "Menu":
+                    {
+                        if (e.Source.Equals(CloseText)) Close();
+                        if (e.Source.Equals(StartGameText))
+                        {
+
+                            SwitchGameState("Game");
+                        }
+                    }
+                    break;
+
+                case "Game": { } break;
+
             }
+
+            
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key.Equals(Key.Escape)) Close();
-        }
+        { }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
+                switch (gameState)
+                {
+                    case "Menu":
+                        {
+                            if (e.Key.Equals(Key.Escape)) Close();
+                        }
+                        break;
 
+                    case "Game":
+                        {
+                            gameState = "Menu";
+                        }
+                        break;
+
+                }
+            
         }
     }
 }

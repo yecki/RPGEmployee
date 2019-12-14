@@ -7,27 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" AllowsTransparency="True" WindowStyle="none" WindowStartupLocation="CenterScreen" Width="1280" Height="720"  KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
     <Grid>
+        <!--Menu BackgroundStuff -->
         <Image Name="MenuBackground" Source="/Images\MenuBackground.png" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Stretch="Fill"/>
 
-
+        <!--Start Game Button Stuff -->
         <Image Name="StartGame" Source="/Images\MenuButton.png"  Margin="56,478,724,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
         <Image Name="StartGameHighlight" Source="/Images\MenuButtonHighlight.png"  Margin="56,478,724,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Hidden" Focusable="False"/>
         <TextBlock Name="StartGameText"  Margin="56,478,724,142" Height="100" Width="500" FontSize="72" TextAlignment="Center" Focusable="False" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave" MouseUp="Window_MouseUp">
             Start Game
         </TextBlock>
-        
-        <Image x:Name="Setting" Source="/Images\MenuButtonGray.png"  Margin="718,478,62,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
+        <!--Start Game Button Stuff -->
+        <Image Name="SettingBut" Source="/Images\MenuButtonGray.png"  Margin="718,478,62,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
         <Image Name="SettingHighlight" Source="/Images\MenuButtonHighlight.png"  Margin="718,478,62,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Hidden" Focusable="False"/>
         <TextBlock Name="SettingText"  Margin="718,478,62,142" Height="100" Width="500"  TextAlignment="Center" FontSize="72" Focusable="False" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave" MouseUp="Window_MouseUp">
             Setting
         </TextBlock>
-        
+        <!--Close Button Stuff -->
         <Image Name="CloseBut" Source="/Images\MenuButton.png"  Margin="413,610,367,10" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
         <Image Name="CloseHighlight" Source="/Images\MenuButtonHighlight.png"  Margin="413,610,367,10" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Hidden" Focusable="False"/>
         <TextBlock Name="CloseText"  Margin="413,610,367,10" Height="100" Width="500" TextAlignment="Center" FontSize="72" Focusable="False" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave" MouseUp="Window_MouseUp">
             Close
         </TextBlock>
-
+        <!--.GameStuffStart Here____________________________________________________________________. -->
+        <Image Name="GameBackground" Source="/Images/PlaceholderBackground.png" Visibility="Hidden"/>
+        
     </Grid>
-    
+
 </Window>

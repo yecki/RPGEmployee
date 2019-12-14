@@ -97,32 +97,35 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuBackground.png">
+    <Content Include="Images\MenuBackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuButton.png">
+    <Content Include="Images\MenuButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuButtonHighlight.png">
+    <Content Include="Images\MenuButtonHighlight.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuButtonGray.png">
+    <Content Include="Images\MenuButtonGray.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sounds\MenuBlip.wav">
+    <Content Include="Sounds\MenuBlip.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Sounds\step.wav">
+    </Content>
+    <Content Include="Sounds\step.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\PlaceholderBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
