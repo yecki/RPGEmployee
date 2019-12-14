@@ -1,16 +1,27 @@
-﻿<Window x:Class="RPGEmplyee.MainWindow"
+﻿<Window x:Class="RPGEmployee.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RPGEmplyee"
+        xmlns:local="clr-namespace:RPGEmployee"
         mc:Ignorable="d"
         Title="MainWindow" AllowsTransparency="True" WindowStyle="none" WindowStartupLocation="CenterScreen" Width="1280" Height="720">
     <Grid>
-        <Image Name="MenuBackground" Source="/Images\MenuBackground.png" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Stretch="Fill">
-            
-        </Image>
-        
+        <Image Name="MenuBackground" Source="/Images\MenuBackground.png" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Stretch="Fill"/>
+
+
+        <Image Name="StartGame" Source="/Images\MenuButton.png" MouseEnter="StartGame_MouseEnter" Margin="56,478,724,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
+        <TextBlock Name="StartGameText" Margin="56,478,724,142" Height="100" Width="500" FontSize="72" TextAlignment="Center">
+            Start Game
+        </TextBlock>
+        <Image x:Name="Setting" Source="/Images\MenuButton.png" MouseEnter="Setting_MouseEnter" Margin="718,478,62,142" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
+        <TextBlock Name="SettingText"  Margin="718,478,62,142" Height="100" Width="500" TextAlignment="Center" FontSize="72">
+            Setting
+        </TextBlock>
+        <Image x:Name="Close" Source="/Images\MenuButton.png" MouseEnter="Close_MouseEnter" Margin="413,610,367,10" Height="100" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill"/>
+        <TextBlock Name="CloseText"  Margin="413,610,367,10" Height="100" Width="500" TextAlignment="Center" FontSize="72">
+            Close
+        </TextBlock>
 
     </Grid>
 </Window>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RPGEmplyee.Properties {
+namespace RPGEmployee.Properties {
     using System;
     
     

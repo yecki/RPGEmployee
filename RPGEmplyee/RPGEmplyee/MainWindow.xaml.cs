@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RPGEmplyee
+namespace RPGEmployee
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,21 @@ namespace RPGEmplyee
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void StartGame_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Setting_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Close_MouseEnter(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

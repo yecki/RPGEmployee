@@ -96,9 +96,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\MenuBackground.png">
+    <Resource Include="Images\MenuBackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
