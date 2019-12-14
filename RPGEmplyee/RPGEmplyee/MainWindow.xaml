@@ -30,7 +30,14 @@
         </TextBlock>
         <!--.GameStuffStart Here____________________________________________________________________. -->
         <Image Name="GameBackground" Source="/Images/GameBackground.png" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Stretch="Fill" Visibility="Hidden"/>
+        <Image Name="Character" Source="/Images/Placeholder character 1.png" Height="60" Width="60" Margin="0,0,0,0" Visibility="Hidden"/>
+        <Image Name="CharacterAnim" Source="/Images/Placeholder character 2.png" Height="60" Width="60" Margin="0,0,0,0" Visibility="Hidden"/>
+        <Image Name="Crate" Source="/Images/Crate.png" Height="60" Width="60" Margin="817,261,403,399" Visibility="Hidden"/>
+        <Image Name="Customer" Source="/Images/PlaceholderDude.png" Height="60" Width="60" Margin="458,550,762,110" Visibility="Hidden"/>
         
+        
+        <!-- MiniGameStuff -->
+        <Image Name="GiveItems" Source="/Images/MenuButton.png" Height="480" Width="960" Margin="258,98,62,142" Visibility="Hidden"/>
     </Grid>
 
 </Window>
