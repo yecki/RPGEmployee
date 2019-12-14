@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" AllowsTransparency="True" WindowStyle="none" WindowStartupLocation="CenterScreen" Width="1280" Height="720">
     <Grid>
-        <Image Name="MenuBackground" Source="E:\GameJam\RPGEmployee\Images\MenuBackground.png" HorizontalAlignment="Left"   VerticalAlignment="Top">
+        <Image Name="MenuBackground" Source="/Images\MenuBackground.png" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Stretch="Fill">
             
         </Image>
+        
+
     </Grid>
 </Window>
